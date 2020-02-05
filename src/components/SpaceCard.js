@@ -14,11 +14,11 @@ export const SpaceCard = (props) => {
             </div>
             <div className='info-box'>
                 
-                <h3>Picture Taken by {props.spaceData.copyright}</h3>
+                <h2>Picture Taken by {props.spaceData.copyright}</h2>
                 
                 <p>{props.spaceData.explanation}</p>
 
-                <p>{props.spaceData.date}</p>
+                <p>Picture of the day for: {props.spaceData.date}</p>
             </div>
         </div>
     )
