@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { SpaceCard } from './SpaceCard'
+import { SpaceCard } from './SpaceCard';
+// import DateInput from './DateInput';
 
 export default function SpaceInfo() {
 
@@ -9,7 +10,7 @@ export default function SpaceInfo() {
     useEffect(() => {
         axios.get(`https://api.nasa.gov/planetary/apod?api_key=hvRXwPZl5Xrlzo7hXWaIMekMfYzkLiq1riGxMHPM`)
         .then(response => {
-            const spaceData = response.data;
+            const spaceData = response.json;
             console.log(`Nasa Photos: ${spaceData}`);
             setSpaceData(spaceData);
           })
@@ -25,3 +26,4 @@ export default function SpaceInfo() {
         </div>
     )
 };
+
