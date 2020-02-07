@@ -1,7 +1,7 @@
 import React from "react";
 import "./space.css";
 
-import DateForm from './DateForm';
+
 
 export const SpaceCard = props => {
     console.log(props.spaceData);
